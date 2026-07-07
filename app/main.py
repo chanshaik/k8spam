@@ -57,7 +57,7 @@ def read_root():
     </head>
     <body>
         <div class="card">
-            <h1>🚀 k8spam is Live!</h1>
+            <h1>🚀 apashampam kirikiri is Live!</h1>
             <p>Running inside a Kubernetes Pod on Minikube.</p>
             <button class="btn" onclick="changeColor()">Click for Magic</button>
         </div>

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8spam-api
+  labels:
+    app: k8spam
+spec:
+  replicas: 2 # Runs two copies of your app for high availability
+  selector:
+    matchLabels:
+      app: k8spam
+  template:
+    metadata:
+      labels:
+        app: k8spam
+    spec:
+      containers:
+      - name: api
+        # UPDATE THIS: Replace with your actual GitHub username
+        image: ghcr.io/chanshaik/k8spam:latest 
+        ports:
+        - containerPort: 80

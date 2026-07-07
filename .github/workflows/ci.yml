@@ -49,10 +49,10 @@ jobs:
 
       - name: Update Kubernetes Deployment Manifest
         run: |
-          # Create a variable with the new image tag (e.g., sha-1234567)
+          ## Create a variable with the new image tag (e.g., sha-1234567)
           IMAGE_TAG=sha-$(git rev-parse --short HEAD)
           
-          # Replace the old image tag with the new one in the deployment.yaml file
+          ## Replace the old image tag with the new one in the deployment.yaml file
           sed -i "s|image: ghcr.io/${{ github.repository }}:.*|image: ghcr.io/${{ github.repository }}:$IMAGE_TAG|g" k8s/deployment.yaml
           
           # Commit and push the changes back to the repository

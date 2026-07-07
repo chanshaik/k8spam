@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8spam-service
+spec:
+  type: ClusterIP
+  selector:
+    app: k8spam
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

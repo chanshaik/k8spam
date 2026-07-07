@@ -36,8 +36,9 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=sha,format=long # Tags the image with the Git commit SHA
-
+            type=sha,format=long
+            type=raw,value=latest
+            
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:

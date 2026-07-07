@@ -17,6 +17,6 @@ spec:
       containers:
       - name: api
         # UPDATE THIS: Replace with your actual GitHub username
-        image: ghcr.io/chanshaik/k8spam:latest 
+        image: ghcr.io/chanshaik/k8spam:sha-0a16807
         ports:
         - containerPort: 80
